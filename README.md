@@ -19,3 +19,6 @@ Open http://localhost:8000.
 - Put avatar and post media files in this repository and reference them with relative paths.
 
 This is an independent archive, not affiliated with Threads. The archive reads local XML files and does not connect to a Threads account.
+
+## Who made this? Stop lying, it ain't you.
+ChatGPT
