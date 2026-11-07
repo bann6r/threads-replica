@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Threads archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;650;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="loveyall.css">
+  <link rel="stylesheet" href="site.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="replica-layout">
+    <aside class="threads-sidebar" aria-label="Threads navigation">
+      <a class="threads-brand" href="https://www.threads.com/" aria-label="Threads home"><img src="icons/threads.svg" alt=""></a>
+      <nav class="threads-nav">
+        <a class="threads-nav-item is-active" href="#archive" aria-current="page"><span class="threads-nav-icon" aria-hidden="true">⌂</span><span>Home</span></a>
+        <a class="threads-nav-item" href="https://www.threads.com/search"><span class="threads-nav-icon" aria-hidden="true">⌕</span><span>Search</span></a>
+        <a class="threads-nav-item" href="https://www.threads.com/activity"><span class="threads-nav-icon" aria-hidden="true">♡</span><span>Activity</span></a>
+        <a class="threads-nav-item" href="https://www.threads.com/compose"><span class="threads-nav-icon" aria-hidden="true">＋</span><span>Create</span></a>
+        <a class="threads-nav-item" href="#profile"><span class="threads-nav-icon" aria-hidden="true">◎</span><span>Profile</span></a>
+      </nav>
+      <a class="threads-more" href="https://www.threads.com/">More <span aria-hidden="true">···</span></a>
+    </aside>
+    <section class="profile-column" aria-label="Threads profile archive">
+      <header class="column-header">
+        <div class="column-header-side"><span class="header-mark" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14.8 5.2 8 12l6.8 6.8"/></svg></span></div>
+        <div class="column-title" id="column-title">bann6r_</div>
+        <div class="column-header-side column-header-side-right" aria-hidden="true"></div>
+      </header>
+      <div class="column-body">
+        <section class="profile-section" id="profile" aria-label="Profile">
+          <div class="profile-top-row">
+            <div class="profile-identity"><h1 class="profile-displayname" id="profile-displayname">n6r</h1><p class="profile-username" id="profile-username">bann6r_</p></div>
+            <img class="profile-avatar" id="profile-avatar" src="pfp/avatar-placeholder.svg" alt="Profile picture">
+          </div>
+          <p class="profile-bio" id="profile-bio">Loading profile…</p>
+          <div class="profile-footer"><span class="profile-followers" id="profile-followers">4 followers</span><a class="profile-follow-button" id="profile-follow-button" href="#" target="_blank" rel="noopener noreferrer">Follow</a></div>
+        </section>
+        <section class="archive-region" aria-label="Posts"><div id="archive" aria-live="polite"><p class="archive-loading">Loading posts…</p></div></section>
+      </div>
+    </section>
+    <aside class="warning-sidebar" aria-label="Archive notice">
+      <section class="warning-card">
+        <div class="warning-card-heading"><span class="warning-symbol" aria-hidden="true">!</span><h2>Warning</h2></div>
+        <p>This is an independent archive. It is not affiliated with or operated by Threads.</p>
+        <p>Posts and profile details are displayed from the local archive files and may not reflect the current account.</p>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>
