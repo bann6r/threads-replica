@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<archive>
+    <post>
+        <username>username</username>
+        <platform>threads</platform>
+        <date datetime="2026-11-06">11/6/2026</date>
+        <avatar>pfp/firefox.png</avatar>
+        <text>image test</text>
+        <images>
+            <image>media/image1.png</image>
+        </images>
+    </post>
+</archive>
