@@ -5,9 +5,10 @@
         <platform>threads</platform>
         <date datetime="2026-11-06">11/6/2026</date>
         <avatar>pfp/firefox.png</avatar>
-        <text>image test</text>
+        <text>this post has images</text>
         <images>
-            <image>media/image1.png</image>
+            <image>media/image1.jpg</image>
         </images>
+        <likes>43</likes>
     </post>
 </archive>
