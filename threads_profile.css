@@ -9,7 +9,7 @@
 --glimmer-opacity-min:0.32;
 --media-inner-border:rgba(0,0,0,0.1);
 --scroll-thumb:#BCC0C4;
---header-height:0px;
+--header-height:0;
 --base-unit:4px;
 --font-family-system:system-ui,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
 --grey-1:239,239,239;
@@ -51,7 +51,7 @@
 --glimmer-opacity-min:0.32;
 --media-inner-border:rgba(255,255,255,0.05);
 --scroll-thumb:rgba(255,255,255,0.3);
---header-height:0px;
+--header-height:0;
 --base-unit:4px;
 --font-family-system:system-ui,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
 --grey-1:239,239,239;
@@ -94,7 +94,7 @@
 --glimmer-opacity-min:0.32;
 --media-inner-border:rgba(255,255,255,0.05);
 --scroll-thumb:rgba(255,255,255,0.3);
---header-height:0px;
+--header-height:0;
 --base-unit:4px;
 --font-family-system:system-ui,-apple-system,
 BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
