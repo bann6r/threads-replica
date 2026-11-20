@@ -2190,6 +2190,7 @@ wjjmScyBEeYcOe3LcQJDuE0UDqlWpXGq4zERPH5l88RgaIAAACQwQbEEUI4H7bHdAM0AfKAhWjTGZE86
       <text>      post body (line breaks kept)
       <quote> same fields as a post (username, platform, date, avatar, text) -> quoted card under the text/images, above the action bar
       <images><image>path</image>…</images>  image previews (400px, cropped) under the text; click opens the full image in a viewer
+      <videos><video>path</video></videos>  inline video players with native controls; direct <video> children are also accepted
       <likes> <comments> <reposts>  counters shown next to the heart / comment / repost icons, in the icon's own color
                   (a missing or empty element simply shows no number)
   Browsers block fetch() on file:// pages, so the snapshot of posts.xml in #posts-xml-fallback is used
@@ -2197,11 +2198,13 @@ wjjmScyBEeYcOe3LcQJDuE0UDqlWpXGq4zERPH5l88RgaIAAACQwQbEEUI4H7bHdAM0AfKAhWjTGZE86
 <script type="application/xml" id="posts-xml-fallback">
 <archive>
     <post>
-        <username>username</username>
-        <platform>threads</platform>
+        <username>bann6r.github.io</username>
         <date datetime="2026-10-18">18/10/2026</date>
-        <avatar>pfp/firefox.png</avatar>
-        <text>loading.</text>
+        <avatar>pfp/test.png</avatar>
+        <text>bla bla</text>
+        <videos>
+            <video>media/RPReplay_Final1792902811.mov</video>
+        </videos>
     </post>
 </archive>
 </script>

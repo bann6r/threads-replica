@@ -5,6 +5,8 @@
         <date datetime="2026-10-18">18/10/2026</date>
         <avatar>pfp/test.png</avatar>
         <text>bla bla</text>
-        <video>media/</video>
+        <videos>
+            <video>media/RPReplay_Final1792902811.mov</video>
+        </videos>
     </post>
 </archive>

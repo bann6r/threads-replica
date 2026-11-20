@@ -33,6 +33,8 @@
     return Array.prototype.map.call(doc.getElementsByTagName('post'), function (p) {
       var post = fields(p), q = first(p, 'quote');
       post.images = list(first(p, 'images'), 'image').map(function (n) { return n.textContent.trim(); }).filter(Boolean);
+      post.videos = list(p, 'video').concat(list(first(p, 'videos'), 'video'))
+        .map(function (n) { return n.textContent.trim(); }).filter(Boolean);
       post.counters = { likes: val(p, 'likes'), comments: val(p, 'comments'), reposts: val(p, 'reposts') };
       post.quote = q ? fields(q) : null;                 // nested quotes are not read
       return post;
@@ -200,6 +202,38 @@
     if (box.firstChild) actions.parentNode.insertBefore(box, actions);
   }
 
+  function setVideos(root, urls) {
+    var actions = root.querySelector('[data-xml-actions]');
+    var old = root.querySelector('.xml-videos');
+    if (old) old.remove();
+    if (!actions || !urls || !urls.length) return;
+    var box = document.createElement('div');
+    box.className = 'xml-media xml-videos';
+    urls.forEach(function (url) {
+      if (!safeUrl(url)) { console.warn('[posts.xml] video skipped (unsupported URL): ' + url); return; }
+      var item = document.createElement('div');
+      item.className = 'xml-video-item';
+      var video = document.createElement('video');
+      video.className = 'xml-video';
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      video.src = url;
+      video.addEventListener('error', function () {
+        if (item.querySelector('.xml-video-fallback')) return;
+        console.warn('[posts.xml] video could not be played: ' + url);
+        var fallback = document.createElement('a');
+        fallback.className = 'xml-video-fallback';
+        fallback.href = url;
+        fallback.textContent = 'This browser could not play the video. Open or download it instead.';
+        item.appendChild(fallback);
+      });
+      item.appendChild(video);
+      box.appendChild(item);
+    });
+    if (box.firstChild) actions.parentNode.insertBefore(box, actions);
+  }
+
   // ---- quoted post ----
   // <platform> value -> icon file (relative to the project folder)
   var PLATFORM_ICONS = { threads: 'icons/threads.svg', bsky: 'icons/bsky.svg' };
@@ -314,6 +348,7 @@
     setAvatar(root.querySelector('img[data-xml-field=avatar]'), post.avatar);
     setPostPlatform(root, post.platform);
     setImages(root, post.images);
+    setVideos(root, post.videos);
     setQuote(root, post.quote);
     ['likes', 'comments', 'reposts'].forEach(function (k) { setCounter(root, k, post.counters[k]); });
   }
