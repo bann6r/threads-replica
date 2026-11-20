@@ -1,2 +1,1 @@
-## why isnt this merged to archive repo?
-because this is still in the works
+## the repo hosted on github is now discontinued. please visit the repo at https://gitlab.com/b6rarchive/threads-replica
